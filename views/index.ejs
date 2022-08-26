@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h2>Image Uploade</h2>
+        <form method="post" action="/multipleImages" enctype="multipart/form-data">
+            <label>Please Select your Image</label>
+            <input type="file" name="file" multiple>
+            <input type="submit" value="upload">
+        </form>
+        <hr>
+        <h2>image_preview</h2>
+      <ul>
+        <%data.forEach(img=>{ %>
+       <li><%=img.filename %></li>
+       <img src="http://localhost:7070/<%=img.filename %>">
+       <% });%> 
+      </ul>
+        
+
+        
+
+    </body>
+</html>
